@@ -8,6 +8,12 @@
     "email": "hello@langa.io",
     "url": "http://langa.io"
   },
+  "contributors": [
+    {
+      "name": "scott-wyatt",
+      "url": "https://github.com/scott-wyatt"
+    }
+  ],
   "main": "index.js",
   "keywords": [
     "Trails",
