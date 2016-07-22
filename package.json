@@ -38,6 +38,7 @@
     "sass": "^0.5.0",
     "sass-loader": "^3.2.0",
     "style-loader": "^0.13.1",
+    "snyk": "^1.17.0",
     "trailpack-core": "^1.0.0-beta-3",
     "trailpack-footprints": "^1.0.0-beta-7",
     "trailpack-gulp": "^1.0.1",
@@ -66,14 +67,25 @@
     "supertest": "^1.2"
   },
   "scripts": {
-    "test": "eslint . && mocha"
+    "start": "node server.js",
+    "test": "snyk test && eslint --fix . && NODE_ENV=testing mocha ",
+    "mocha": "NODE_ENV=testing mocha",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run synk-protect"
   },
   "engines": {
     "node": ">= 4.0.0"
   },
   "eslintConfig": {
-    "extends": "trails"
+    "extends": "trails",
+    "env": {
+      "mocha": true
+    },
+    "rules": {
+      "nomen": 0
+    }
   },
   "repository": "git@github.com:langateam/trailsjs.io.git",
-  "license": "MIT"
+  "license": "MIT",
+  "snyk": true
 }
