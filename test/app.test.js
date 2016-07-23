@@ -2,7 +2,7 @@
 
 const assert = require('assert')
 
-describe('TireFax', () => {
+describe('Trailsjs.io', () => {
 
   it('Should exist', () => {
     assert(global.app)
