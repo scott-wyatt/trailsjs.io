@@ -1,0 +1,14 @@
+version: v1.5.2
+ignore: {}
+patch:
+  'npm:minimatch:20160620':
+    - trailpack-gulp > gulp > vinyl-fs > glob-stream > glob > minimatch:
+        patched: '2016-07-22T23:08:53.255Z'
+    - trailpack-gulp > gulp > vinyl-fs > glob-stream > minimatch:
+        patched: '2016-07-22T23:08:53.255Z'
+    - trailpack-gulp > gulp > vinyl-fs > glob-watcher > gaze > globule > glob > minimatch:
+        patched: '2016-07-22T23:08:53.255Z'
+    - trailpack-gulp > gulp > vinyl-fs > glob-watcher > gaze > globule > minimatch:
+        patched: '2016-07-22T23:08:53.255Z'
+    - trailpack-webpack > babel-core > minimatch:
+        patched: '2016-07-22T23:08:53.255Z'

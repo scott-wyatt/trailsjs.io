@@ -5,6 +5,8 @@ const babel = require('gulp-babel')
 const webpack = require('webpack-stream')
 const sass = require('gulp-sass')
 const imagemin = require('gulp-imagemin')
+const path = require('path')
+const nodeModulesDir = path.resolve(__dirname, '../node_modules')
 
 module.exports = {
 
@@ -38,6 +40,7 @@ module.exports = {
           module: {
             loaders: [{
               test: /\.js$/,
+              exclude: [nodeModulesDir], // we don't want to transpile node_modules
               loader: 'babel-loader',
               query: {
                 presets: ['react', 'es2015', 'stage-0']
